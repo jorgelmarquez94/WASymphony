@@ -1,0 +1,115 @@
+program : PROGRAM ID ';' variable_declaration function_declaration block 
+
+empty : 
+
+variable_declaration : type ids ';' variable_declaration
+	| empty 
+
+ids : id other_ids 
+
+other_ids : ',' ids 
+	| empty 
+
+id : ID 
+	| ID '[' expression ']' 
+
+expression : level1 
+	| level1 EXPONENTIATION level1  
+
+level1 : level2 
+	| '+' level2
+	| '-' level2
+
+level2 : level3 
+	| level3 OR level3 
+	| level3 AND level3 
+
+level3 : level4
+	| level4 '<' level4
+	| level4 '>' level4
+	| level4 LESS_EQUAL_THAN level4
+	| level4 GREATER_EQUAL_THAN level4
+	| level4 EQUALS level4 
+
+level4 : level5
+	| level5 '+' level5
+	| level5 '-' level5 
+
+level5 : level6
+	| NOT level6
+	| level6 '*' level6
+	| level6 '/' level6
+	| level6 MOD level6 
+
+level6 : '(' expression ')'
+	| const
+	| increment
+	| decrement 
+
+increment : INCREMENT id 
+
+decrement : DECREMENT id 
+
+function_declaration : function function_declaration
+	| empty
+
+'''function : FUN return_type ID '(' parameters ')' '{' variable_declaration statutes '}' ';' 
+
+return_type : type 
+	| VOID 
+
+type : INT 
+	| DEC 
+	| CHAR 
+	| STR 
+	| BOOL 
+
+statutes : statute ';' statutes
+	| empty
+
+'''statute   : call
+	| assignment
+	| condition
+	| cycle 
+	| special 
+	| return
+	| increment
+	| decrement 
+
+call : ID '(' expressions ')' 
+
+expressions : expression
+	| expression ',' expressions 
+
+assignment : id '=' expression 
+
+condition : IF '(' expression ')' block elses 
+
+cycle : WHILE '(' expression ')' block 
+
+special : SPECIAL_ID '(' expressions ')' 
+
+return : RETURN expression
+	| RETURN 
+
+elses : empty
+	| ELSE block
+	| ELSEIF '(' expression ')' block elses 
+
+parameters : type ID other_parameters
+	| empty 
+
+other_parameters : ',' type ID other_parameters
+	| empty 
+
+const : id 
+	| call
+	| special
+	| INT_VAL
+	| DEC_VAL
+	| CHAR_VAL
+	| STR_VAL
+	| BOOL_VAL 
+
+block : '{' statutes '}' 
+

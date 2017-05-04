@@ -1,0 +1,23 @@
+program fibonacci_iter;
+int result, term;
+int one_before, two_before, i, sum, t;
+
+term = 8;
+
+if(term <= 0 or term equals 1) {
+	result = 0;
+} else {
+	one_before = 1;
+	two_before = 0;
+
+	i = 2;
+	while(not (i equals term)) {
+		t = two_before;
+		two_before = one_before;
+		one_before = one_before + t;
+		++i;
+	}
+
+	result = one_before;
+}
+println(result);

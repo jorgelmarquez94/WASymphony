@@ -1,0 +1,2 @@
+program repeated_declaration;
+int x, x;

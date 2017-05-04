@@ -1,0 +1,2 @@
+program outside_func;
+return 1;

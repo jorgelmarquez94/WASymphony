@@ -1,0 +1,3 @@
+program negative_index;
+int sample[20];
+sample[-1] = 10;

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block custom_css %}
+    <link href="{% static 'css/examples.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="leftcolumn" id="myNav">
+            <div class="segment"><span>PROJECT</span> SYMPHONY</div>
+                <ul class="chapters">
+                    <li>Created by:</li>
+                    <li>Ali Ghahraei</li>
+                    <li>Jorge Márquez</li>
+                </ul>
+    </div>
+    <div class="centercolumn">
+        <div class="tutorialbox">
+            <h1>About Us <span>Symphony Programmers</span></h1>
+    <div class="content" style="width:250px; margin:0 auto;">
+
+        <div>
+        <h2>Ali Ghahraei</h2>
+        <img src="{% static "img/AliGhahraei.jpg" %}" alt="My image"/>
+        <p>ITC 8th Semester</p>
+        <h2>Jorge Márquez</h2>
+        <img src="{% static "img/JorgeMarquez.jpg" %}" alt="My image2" style="height: 211px; width: 211px"/>
+        <p>ITC 9th Semester</p>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

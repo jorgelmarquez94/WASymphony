@@ -1,0 +1,5 @@
+program parameter_mismatch;
+fun int sum(int first, int second) {
+	return first + second;
+}
+sum(1, "Hello");

@@ -1,0 +1,3 @@
+program repeated_parameter;
+fun void duplicate(int x, int x){
+}

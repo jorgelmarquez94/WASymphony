@@ -1,0 +1,2 @@
+program bool_plus_bool;
+println(true + false);

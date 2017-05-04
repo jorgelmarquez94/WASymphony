@@ -1,0 +1,5 @@
+program too_few_params;
+fun void func (str fst) {
+	print(fst);
+}
+func();

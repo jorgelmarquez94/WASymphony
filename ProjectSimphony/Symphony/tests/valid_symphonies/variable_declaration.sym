@@ -1,0 +1,8 @@
+program variable_declaration;
+int x, y;
+str hola, adios;
+x = 999;
+adios = "adios";
+
+println(x);
+println(adios);

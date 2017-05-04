@@ -1,0 +1,10 @@
+program musical_loop;
+    int i;
+    i = 0;
+    while(i < 3) {
+        C();
+        D();
+        E();
+        ++i;
+    }
+    

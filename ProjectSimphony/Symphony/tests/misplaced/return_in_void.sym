@@ -1,0 +1,4 @@
+program in_void;
+fun void bad() {
+	return "Hi!";
+}

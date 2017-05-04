@@ -1,0 +1,6 @@
+program void_call_in_expression;
+fun void meh() {
+	int c;
+	c = 5;
+}
+print(meh() * 10);

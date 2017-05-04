@@ -1,0 +1,13 @@
+program factorial;
+fun int factorial(int number){
+	int result;
+
+	if((number equals 0) or (number equals 1)){
+		result = 1;
+	} else {
+		result = number * factorial(number - 1);
+	}
+
+	return result;
+}
+print(factorial(10) + factorial(4));

@@ -1,0 +1,2 @@
+program break_outside_while;
+break;

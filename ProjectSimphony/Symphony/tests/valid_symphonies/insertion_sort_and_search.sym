@@ -1,0 +1,64 @@
+program insertion_sort_and_search;
+int elements[5], i;
+fun void sort(int size) {
+	int i, j, t;
+	i = 1;
+
+	while(i <= size - 1) {
+		j = i;
+
+		while (j > 0) {
+			if(elements[j] < elements[j - 1]) {
+				break;
+			}
+
+			t = elements[j];
+			elements[j] = elements[j - 1];
+			elements[j - 1] = t;
+
+			--j;
+		}
+
+		++i;
+	}
+}
+
+
+fun int binary_search(int start, int end, int wanted) {
+	int half, result;
+	half = floor((start + end) / 2);
+
+	if(end < start) {
+		result = -1;
+	} elseif(elements[half] equals wanted) {
+		result = half;
+	} elseif(wanted > elements[half]) {
+		result = binary_search(start, half - 1, wanted);
+	} else {
+		result = binary_search(half + 1, end, wanted);
+	}
+
+	return result;
+}
+
+
+elements[0] = 6;
+elements[1] = 0;
+elements[2] = 157;
+elements[3] = 4;
+elements[4] = -10;
+
+sort(5);
+
+i = 0;
+while(i < 5) {
+	print(elements[i]);
+	print(' ');
+	++i;
+}
+println("");
+
+println("Found 4 at index: " + to_str(binary_search(0, 4, 4)));
+println("Found 157 at index: " + to_str(binary_search(0, 4, 157)));
+println("Found 0 at index: " + to_str(binary_search(0, 4, 0)));
+println("Found 20 at index: " + to_str(binary_search(0, 4, 20)));

@@ -1,0 +1,5 @@
+program missing;
+fun int funcioncilla() {
+
+}
+funcioncilla();

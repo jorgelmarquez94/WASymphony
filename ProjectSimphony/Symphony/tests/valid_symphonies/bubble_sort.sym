@@ -1,0 +1,42 @@
+program bubble_sort;
+int i, elements[3];
+fun void sort(int size) {
+	int unsorted, comparisons_done, t;
+	bool swapped;
+
+	unsorted = size;
+	while(unsorted > 1) {
+		comparisons_done = 0;
+		swapped = false;
+
+		while(comparisons_done < unsorted - 1) {
+			if(elements[comparisons_done] > elements[comparisons_done + 1]) {
+				t = elements[comparisons_done];
+				elements[comparisons_done] = elements[comparisons_done + 1];
+				elements[comparisons_done + 1] = t;
+				swapped = true;
+			}
+			++comparisons_done;
+		}
+
+		if(not swapped) {
+			break;
+		}
+
+		--unsorted;
+	}
+}
+
+elements[0] = 7;
+elements[1] = 2;
+elements[2] = 4;
+
+sort(3);
+
+i = 0;
+while(i < 3) {
+	print(elements[i]);
+	print(" ");
+	++i;
+}
+println("");

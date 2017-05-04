@@ -1,0 +1,3 @@
+program assign;
+int num;
+num = "Hola";

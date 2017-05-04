@@ -1,0 +1,40 @@
+program mary_had_a_little_lamb_song;
+int i, j;
+fun void BAG() {
+	B();
+	A();
+	G();
+}
+fun void AA() {
+	i= 0;
+	while(i < 2) {
+		A();
+		++i;
+	}
+}
+fun void AAA() {
+	i= 0;
+	while(i < 3) {
+		A();
+		++i;
+	}
+}
+fun void BBB() {
+	i= 0;
+	while(i < 3) {
+		B();
+		++i;
+	}
+}
+fun void mary_had_a_little_lamb() {
+	 BAG();
+	 A();
+	 BBB();
+}
+
+mary_had_a_little_lamb();
+AAA();
+BBB();
+mary_had_a_little_lamb();
+AA();
+BAG();

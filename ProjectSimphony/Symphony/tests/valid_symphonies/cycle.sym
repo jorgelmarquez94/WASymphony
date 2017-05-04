@@ -1,0 +1,8 @@
+program cycle;
+int a;
+a = 0;
+
+while(a < 3) {
+	println("Hi");
+	println(++a);
+}

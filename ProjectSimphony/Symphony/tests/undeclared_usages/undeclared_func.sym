@@ -1,0 +1,2 @@
+program undeclared_func;
+func("Hi");

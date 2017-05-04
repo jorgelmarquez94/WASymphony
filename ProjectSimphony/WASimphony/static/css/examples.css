@@ -1,0 +1,62 @@
+
+
+
+
+.leftcolumn ul li code a{background:transparent}
+
+h1,h2{color:#000;font-family:"Trebuchet MS",Arial,sans-serif;font-weight:700;line-height:1.1em}
+h1{color:#000;font-size:26px;line-height:36px;font-weight:700;padding-bottom:20px;text-align:center}
+h1 span{color:#e26130;font-size:inherit}
+h2{font-size:21px}
+p{padding-top:12px}
+html,body{min-height:100%}
+
+
+
+.leftcolumn,.centercolumn,.sidebar{float:left}
+.centercolumn{width:950px}
+.tutorialbox{color:#3C3C3C;position:relative;min-height:800px;border:1px solid #d2d2d2;box-shadow:0 0 3px rgba(90,90,90,0.2);background:url(../images/corner-left.png) no-repeat scroll left top #fff}
+.tutorialbox .content{padding:25px 15px 15px;background:url(../images/corner-right.png) no-repeat scroll right top transparent}
+.leftcolumn{width:165px;padding-right:6px}
+.leftcolumn,.sidebar{padding-top:63px}
+.tutorialbox ul{list-style:none outside none;padding-left:30px}
+.tutorialbox ul li{padding-top:7px;padding-left:20px;background:url(../images/circle.png) no-repeat scroll left 14px transparent}
+.tutorialbox table.data ul li{padding-top:3px;background-position:left 10px}
+.tutorialbox dl{list-style:none outside none}
+.tutorialbox dl dt{font-weight:700;padding-top:12px}
+.tutorialbox dl dd{padding:7px 0 0 20px}
+
+.tutorialbox .unordered-list-demo ul,.tutorialbox .ordered-list-demo ul{padding-left:40px}
+.tutorialbox .unordered-list-demo ul{list-style-type:disc}
+.tutorialbox .ordered-list-demo ul{list-style-type:decimal}
+.tutorialbox .unordered-list-demo ul li,.tutorialbox .ordered-list-demo ul li{padding:0;background:none}
+.tutorialbox .definition-list-demo dl{margin-top:-4px}
+.tutorialbox .definition-list-demo dt{padding-top:4px}
+.tutorialbox .definition-list-demo dd{margin-left:40px;padding:4px 0 0}
+
+.leftcolumn .segment:before{background:#e26130;content:"";height:1px;left:-20px;margin-top:-5px;position:absolute;top:50%;width:10px}
+.leftcolumn .segment{border-bottom:1px dashed #D0D0D0;color:#333;font-size:17px;font-style:italic;font-weight:400;margin-bottom:10px;padding-bottom:10px;position:relative;font-family:"Trebuchet MS",Arial,sans-serif;line-height:1.1em}
+.leftcolumn .segment span{color:#e26130}
+.leftcolumn .segment i{font-family:Arial,sans-serif}
+.leftcolumn .segment.affiliate i{width:10px;height:10px;display:inline-block;margin-left:2px;background:url(../images/sprite.png) no-repeat scroll 100% -691px transparent}
+.leftcolumn .segment.affiliate:before{background:#EFB351}
+.leftcolumn .segment.affiliate span{color:#efb351}
+.leftcolumn .segment.compact{letter-spacing:-.06em}
+.leftcolumn ul{font-size:14.4px;list-style:none outside none;padding:5px 0 25px}
+.leftcolumn ul li a,.leftcolumn ul li a:visited{color:#4D4D4D;display:inline-block;padding:1px 0;text-decoration:none}
+.leftcolumn ul li code{color:#4D4D4D;font-size:12px}
+.leftcolumn ul li a:hover{text-decoration:underline}
+.leftcolumn ul li a.selected{text-decoration:none;border-bottom:1px dotted #999}
+.leftcolumn ul li a.selected:hover{text-decoration:none}
+.leftcolumn ul li a.rounded,.rounded{color:#F9F9F9;font-size:12px;font-weight:700;display:inline-block;text-decoration:none;border-radius:800px;background-color:#b7d2e3;padding:0 10px;cursor:pointer;font-family:"Trebuchet MS",Arial,sans-serif}
+.leftcolumn ul li a.rounded:hover,.rounded:hover{background-color:#679BB7}
+.leftcolumn ul li a.more{margin:10px 0;padding:0 26px 0 10px;background:url(../images/sprite.png) no-repeat 95% -556px #b7d2e3}
+
+.ace_editor {
+        border: 1px solid lightgray;
+        margin: auto;
+        height: 200px;
+    }
+
+
+

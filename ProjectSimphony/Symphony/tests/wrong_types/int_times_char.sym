@@ -1,0 +1,2 @@
+program int_times_char;
+print(1 * 'A');

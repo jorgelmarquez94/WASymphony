@@ -1,0 +1,3 @@
+program uninitialized;
+str a;
+print(a);

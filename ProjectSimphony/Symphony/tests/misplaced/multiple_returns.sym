@@ -1,0 +1,5 @@
+program multiple;
+fun char standard() {
+	return 'a';
+	return 'b';
+}

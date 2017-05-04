@@ -1,0 +1,10 @@
+program global_variables;
+int alpha, beta;
+fun void frob(){
+	dec b;
+	alpha = 3;
+	beta = 6;
+	b = alpha / 3;
+}
+frob();
+println(alpha + beta);

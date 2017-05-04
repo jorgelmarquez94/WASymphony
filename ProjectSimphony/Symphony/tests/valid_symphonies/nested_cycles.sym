@@ -1,0 +1,18 @@
+program nested_cycles;
+int i, j;
+i = 1;
+
+while(i < 10) {
+	j = 1;
+
+	print("i: ");
+	println(i);
+
+	while(j < 5) {
+		print("j: ");
+		print(j);
+		++j;
+	}
+
+	++i;
+}

@@ -1,0 +1,48 @@
+program list_ops;
+int elements[1000];
+int size;
+fun void insert(int element, int index) {
+	 int i;
+	 i = size - 1;
+	 while(i >= index) {
+		 elements[i + 1] = elements[i];
+		 --i;
+	 }
+
+	 elements[index] = element;
+	 ++size;
+}
+fun void delete(int index) {
+	while(index < size - 1) {
+		elements[index] = elements[index + 1];
+		++index;
+	}
+
+	--size;
+}
+fun void show(str message) {
+	 int i;
+	 i = 0;
+	 print(message + " ");
+	 while(i < size) {
+		print(to_str(elements[i]) + " ");
+		++i;
+	 }
+	 println("");
+}
+
+size = 0;
+insert(4, 0);
+insert(6, 1);
+insert(2, 0);
+insert(5, 2);
+insert(7, size);
+insert(8, size);
+show("End of insert:");
+
+delete(2);
+show("Deleted 2:");
+delete(size - 1);
+show("Deleted " + to_str(size) + ":");
+delete(0);
+show("Deleted 0:");

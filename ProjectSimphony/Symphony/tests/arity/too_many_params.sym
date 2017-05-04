@@ -1,0 +1,5 @@
+program too_many_params;
+fun dec func(int arg){
+	return 1.0;
+}
+func("Hi", 2.0);

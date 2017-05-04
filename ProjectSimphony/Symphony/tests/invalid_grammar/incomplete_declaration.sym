@@ -1,0 +1,2 @@
+program incomplete_declaration;
+int ;

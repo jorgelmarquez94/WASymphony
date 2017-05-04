@@ -1,0 +1,152 @@
+{% extends 'course.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+        <div class="leftcolumn" id="myNav">
+            <div class="segment"><span>SYMPHONY</span> SYNTAX</div>
+                <ul class="chapters">
+                    <li><a href="http://127.0.0.1:8000/course/syntax/welcome/">Welcome</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/syntax/variables/">Variables</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/syntax/booleans/">Booleans</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/syntax/assign-values/">Reassign Values</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/syntax/math/">Math</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/syntax/exponentation/">Exponentation</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/syntax/modulo/">Modulo</a></li>
+                </ul>
+            <div class="segment"><span>SYMPHONY</span> STRINGS & CONSOLE OUTPUT</div>
+                <ul class="chapters">
+                    <li><a href="http://127.0.0.1:8000/course/strings/strings/">Strings</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/strings/string-methods/">String Methods</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/console-output/printing-strings/">Printing Strings</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/console-output/printing-variables/">Printing Variables</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/strings/string-concatenation/">String Concatenation</a></li>
+                </ul>
+            <div class="segment"><span>SYMPHONY</span> CONDITIONALS & CONTROL FLOW</div>
+                <ul class="chapters">
+                    <li><a href="http://127.0.0.1:8000/course/conditionals/comparators/">Comparators</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/conditionals/boolean-operators/">Boolean Operators</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/control-flow/IF-ELSE-ELSEIF/">IF, ELSE and ElSEIF</a></li>
+                </ul>
+            <div class="segment"><span>SYMPHONY</span> FUNCTIONS</div>
+                <ul class="chapters">
+                    <li><a href="http://127.0.0.1:8000/course/functions/functions/">Functions</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/functions/call-and-response/">Call and Response</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/functions/parameters-and-arguments/">Parameters and Arguments</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/functions/functions-calling-functions/">Functions Calling Functions</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/functions/built-in-functions/">Built-In Functions</a></li>
+                </ul>
+            <div class="segment"><span>SYMPHONY</span> LOOPS</div>
+                <ul class="chapters">
+                    <li><a href="http://127.0.0.1:8000/course/loops/while-loops/">While Loops</a></li>
+                </ul>
+        </div>
+    <div class="centercolumn">
+        <div class="tutorialbox">
+    <!--Text Content-->
+    <div class="content">
+        <!-- InstanceBeginEditable name="main_content" -->
+        <h1>Symphony <span>Boolean Operators</span></h1>
+        <p class="definition">In this tutorial you will learn how to compare statements.</p>
+        <h2>Boolean Operators with Symphony</h2>
+        <p>Boolean operators compare statements and result in boolean values. There are three boolean operators:</p>
+        <ul>
+            <li>and, which checks if both the statements are true</li>
+            <li>or, which checks if at least one of the statements is true</li>
+            <li>not, which gives the opposite of the statement</li>
+        </ul>
+        <div class="col-xs-12 col-sm-2">
+            <button class="btn btn-lg btn-primary btn-block" id="run" type="button">Run</button>
+        </div>
+        </div>
+
+        <br>
+        <div class="content">
+        <pre class="ace_editor" id="editor">program symphony_boolean_operators;
+    bool one, two, three, four, five, six;
+    one = 1 < 2 and 2 < 3;
+    two = 1 < 2 and 2 > 3;
+    three = 1 < 2 or 2 > 3;
+    four = 1 > 2 or 2 > 3;
+    five = not true;
+    six = not ((3**4) < (4**3));
+    println(one);
+    println(two);
+    println(three);
+    println(four);
+    println(five);
+    println(six);
+    </pre>
+            <br>
+        <div class="well">
+            <pre id="result"></pre>
+        </div>
+
+    </div>
+
+        </div>
+    </div>
+    </div>
+{% endblock %}
+
+{% block custom_js %}
+    <script src="{% static 'src-noconflict/ace.js' %}"></script>
+    <script src="{% static 'src-noconflict/ext-themelist.js' %}"></script>
+
+    <script>
+    var URL = "{% url 'execute_code_view' %}";
+    // create first editor
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/java");
+    editor.renderer.setScrollMargin(10, 10);
+    editor.setReadOnly(true);
+
+    $("#run").click(function(){
+        //alert(URL);
+        var code = editor.getValue();
+        $.ajax({type: 'POST',
+            url: URL,                            // some data url
+            data: {program: code},       // some params
+            success: function (response) {                  // callback
+                if (response.result === 'OK') {
+                    if (response.data && typeof(response.data) === 'object') {
+                        // do something with the successful response.data
+                        // e.g. response.data can be a JSON object
+                        //alert('Everything went okay.');
+                        var wellInput = document.getElementsByClassName('well')[0];
+                        wellInput.innerHTML = response.data.prints;
+
+                        var noteobjs = {
+                            A : new Audio('/static/music/A.wav'),
+                            B : new Audio('/static/music/B.wav'),
+                            C : new Audio('/static/music/C.wav'),
+                            D : new Audio('/static/music/D.wav'),
+                            E : new Audio('/static/music/E.wav'),
+                            F : new Audio('/static/music/F.wav'),
+                            G : new Audio('/static/music/G.wav')
+                        };
+
+                        $.map(response.data.notes, function (el) {
+                            return el;
+                        });
+
+                        var i = -1;
+                        var len = response.data.notes.length;
+                        function playSnd() {
+                            i++;
+                            if (i == len) return;
+                            noteobjs[response.data.notes[i]].addEventListener('ended', playSnd);
+                            noteobjs[response.data.notes[i]].play();
+                        }
+                        playSnd();
+                    }
+                } else {
+                    // handle an unsuccessful response
+                    //alert('Something went wrong.');
+                }
+            }
+        });
+    });
+    </script>
+{% endblock %}

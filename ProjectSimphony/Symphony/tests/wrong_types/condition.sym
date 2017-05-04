@@ -1,0 +1,5 @@
+program condition;
+int num; 
+if(num) {
+	println("Oops");
+}

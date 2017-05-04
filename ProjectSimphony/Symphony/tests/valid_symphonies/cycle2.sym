@@ -1,0 +1,9 @@
+program simple_while;
+int i, accum;
+i = 0;
+accum = 0;
+while(i < 10){
+	accum = accum + i;
+	++i;
+}
+print(accum * 2);

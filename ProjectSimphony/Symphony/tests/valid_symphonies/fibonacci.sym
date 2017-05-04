@@ -1,0 +1,17 @@
+program fibonacci;
+fun int fibonacci(int term) {
+	int result;
+
+	if(term <= 0) {
+		result = 0;
+	} elseif(term equals 1) {
+		result = 0;
+	} elseif(term equals 2) {
+		result = 1;
+	} else {
+		result = fibonacci(term - 1) + fibonacci(term - 2);
+	}
+
+	return result;
+}
+print(fibonacci(9));

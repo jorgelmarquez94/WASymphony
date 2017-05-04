@@ -1,0 +1,8 @@
+program repeated_function_definition;
+int patito;
+fun int func(){
+	return 1;
+}
+fun dec func(){
+	return 1.0;
+}

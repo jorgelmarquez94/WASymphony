@@ -1,0 +1,14 @@
+program simple_break;
+int counter;
+counter = 0;
+
+while(true) {
+	++counter;
+
+	if(counter equals 10) {
+		break;
+	} elseif(counter equals -1) {
+		break;
+	}
+}
+println(counter);

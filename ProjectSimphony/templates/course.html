@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block custom_css %}
+    <link href="{% static 'css/all-courses.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="leftcolumn" id="myNav">
+            <div class="segment"><span>SYMPHONY</span> SYNTAX</div>
+                <ul class="chapters">
+                    <li><a href="http://127.0.0.1:8000/course/syntax/welcome/">Welcome</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/syntax/variables/">Variables</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/syntax/booleans/">Booleans</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/syntax/assign-values/">Assign Values</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/syntax/math/">Math</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/syntax/exponentation/">Exponentation</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/syntax/modulo/">Modulo</a></li>
+                </ul>
+            <div class="segment"><span>SYMPHONY</span> STRINGS & CONSOLE OUTPUT</div>
+                <ul class="chapters">
+                    <li><a href="http://127.0.0.1:8000/course/strings/strings/">Strings</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/strings/string-methods/">String Methods</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/console-output/printing-strings/">Printing Strings</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/console-output/printing-variables/">Printing Variables</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/strings/string-concatenation/">String Concatenation</a></li>
+                </ul>
+            <div class="segment"><span>SYMPHONY</span> CONDITIONALS & CONTROL FLOW</div>
+                <ul class="chapters">
+                    <li><a href="http://127.0.0.1:8000/course/conditionals/comparators/">Comparators</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/conditionals/boolean-operators/">Boolean Operators</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/control-flow/IF-ELSE-ELSEIF/">IF, ELSE and ElSEIF</a></li>
+                </ul>
+            <div class="segment"><span>SYMPHONY</span> FUNCTIONS</div>
+                <ul class="chapters">
+                    <li><a href="http://127.0.0.1:8000/course/functions/functions/">Functions</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/functions/call-and-response/">Call and Response</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/functions/parameters-and-arguments/">Parameters and Arguments</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/functions/functions-calling-functions/">Functions Calling Functions</a></li>
+                    <li><a href="http://127.0.0.1:8000/course/functions/built-in-functions/">Built-In Functions</a></li>
+                </ul>
+            <div class="segment"><span>SYMPHONY</span> LOOPS</div>
+                <ul class="chapters">
+                    <li><a href="http://127.0.0.1:8000/course/loops/while-loops/">While Loops</a></li>
+                </ul>
+        </div>
+    <div class="centercolumn">
+        <div class="tutorialbox">
+    <div class="content">
+        <h1>Symphony <span>Course</span></h1>
+        <h2>Symphony Classroom</h2>
+        <p class="definition">Here you will learn the basic knowledge of programming in Symphony language</p>
+        <h2>Symphony Classes</h2>
+        <p>The classes are divided in 5 subcategories:</p>
+        <ul>
+            <li>Syntax</li>
+            <li>String & Console Output</li>
+            <li>Conditionals & Control Flow</li>
+            <li>Functions</li>
+            <li>Loops</li>
+        </ul>
+        <h2>Let's get started!</h2>
+        <p>Be prepared to learn the most amazing programming language in the world.</p>
+    </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
+
+

@@ -1,0 +1,2 @@
+program division_by_zero;
+println(1 / 0);

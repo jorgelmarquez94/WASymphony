@@ -1,0 +1,12 @@
+program factorial_iter;
+int number, result, i;
+number = 20;
+
+i = 1;
+result = 1;
+while(i <= number) {
+	result = result * i;
+	++i;
+}
+
+println(result);

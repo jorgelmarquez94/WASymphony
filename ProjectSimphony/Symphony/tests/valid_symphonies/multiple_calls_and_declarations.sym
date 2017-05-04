@@ -1,0 +1,33 @@
+program multiple_calls_and_declarations;
+int x, y, z, a;
+int b, c, d, e;
+dec mi, mo;
+char ta, te;
+bool tu, ti;
+str fru, _ti;
+
+
+fun int fun1(int x, dec y, char z, bool mi, str fru) {
+	return 1;
+}
+
+
+fun dec fun2(int x) {
+	return 2.0;
+}
+
+fun char fun3() {
+	print(1);
+	return 'A';
+}
+
+fun bool fun4() {
+	return true or false;
+}
+
+fun str fun5() {
+	return "Hellow";
+}
+print(fun5() + (fun3() + fun3()));
+print(fun4());
+print(fun2(1) * fun1(1, 1.0, 'a', true, "a"));

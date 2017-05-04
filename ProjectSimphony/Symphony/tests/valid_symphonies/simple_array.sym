@@ -1,0 +1,13 @@
+program symple_array;
+str strings[10], strings2[7];
+str greeting, farewell;
+
+greeting = "hi";
+farewell = "bye";
+strings2[4 * 2 - 2] = "b";
+strings[1] = "c";
+strings[0] = "a";
+
+println(greeting);
+println(strings[0] + strings2[6] + strings[1]);
+println(farewell);

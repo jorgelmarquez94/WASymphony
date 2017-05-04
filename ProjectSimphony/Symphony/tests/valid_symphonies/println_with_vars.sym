@@ -1,0 +1,5 @@
+program println_with_vars;
+int x, y;
+x = 6;
+y = 5;
+println(x * y);

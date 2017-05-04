@@ -1,0 +1,6 @@
+program simple_call;
+fun int by_two(int number) {
+	return number * 2;
+}
+print(by_two(3) * 2);
+print(by_two(4) * 2);

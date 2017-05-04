@@ -1,0 +1,2 @@
+program void_special_call_in_expr;
+print(println(2));

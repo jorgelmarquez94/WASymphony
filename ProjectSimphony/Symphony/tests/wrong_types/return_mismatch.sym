@@ -1,0 +1,4 @@
+program return_mismatch;
+fun str mifun() {
+	return 3.14159;
+}

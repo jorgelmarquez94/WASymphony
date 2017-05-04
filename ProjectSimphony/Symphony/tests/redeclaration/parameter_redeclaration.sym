@@ -1,0 +1,4 @@
+program parameter_redeclaration;
+fun void redec(int x){
+  int y, x;
+}
